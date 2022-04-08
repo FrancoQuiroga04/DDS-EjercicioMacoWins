@@ -1,0 +1,33 @@
+
+class Prenda{
+    var property precioBase
+    var property estado = null
+
+    method precio(){
+
+    }
+}
+
+class Estado{
+    method precioFinal()
+}
+
+object nueva inherits Estado{
+   override method precioFinal(prenda.precioBase()){
+       return prenda.precioBase()
+   }
+}
+object descuento inherits Estado{
+ var descuento = 100
+
+   override method precioFinal(prenda.precioBase()){
+       return prenda.precioBase() - descuento
+   }
+
+}
+
+object liquidacion inherits Estado{
+   override method precioFinal(prenda.precioBase()){
+       return prenda.precioBase() * 0.5
+   }
+}
